@@ -1,7 +1,9 @@
 <h3>Satellite Counts:</h3>
 <div class="counts">
   <div>Total: <span>9</span></div>
-  <div>Space Debris: <span>1</span></div>
+  <div>
+    Space Debris: <span>{{ debris }}</span>
+  </div>
   <div>Communication: <span>2</span></div>
   <div>Probe: <span>2</span></div>
   <div>Positioning: <span>1</span></div>
@@ -11,10 +13,10 @@
 
 <h3>Satellite Counts:</h3>
 
-<div class="counts">
-  <div *ngFor="let orbiter of satellites">
-    {{ orbiter.type }}
-    <span>{{ count(orbiter.type) }}</span>
+<div class="counts" *ngFor="let sat of satellites">
+  <div>
+    {{ sat.type }}
+    <span>{{ count(sat.type) }}</span>
   </div>
 </div>
 

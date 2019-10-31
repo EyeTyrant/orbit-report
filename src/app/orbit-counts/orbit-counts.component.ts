@@ -11,7 +11,7 @@ export class OrbitCountsComponent implements OnInit {
   @Input() satellites: Satellite[];
   @Input() displayList: Satellite[];
   total: number = 0;
-  debris: number = 0;
+  debris: number = 5;
   comm: number = 0;
   probe: number = 0;
   position: number = 0;
