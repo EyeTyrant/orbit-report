@@ -14,33 +14,8 @@
 <h3>Satellite Counts:</h3>
 
 <div class="counts" *ngFor="let sat of satellites">
-  <div>
+  <div *ngIf="!types.includes(sat.type)">
     {{ sat.type }}
     <span>{{ count(sat.type) }}</span>
-  </div>
-</div>
-
-<h3>Satellite Counts:</h3>
-<div class="counts">
-  <div>
-    Total: <span>{{ total }}</span>
-  </div>
-  <div>
-    Space Debris: <span>{{ debris }}</span>
-  </div>
-  <div>
-    Communication: <span>{{ comm }}</span>
-  </div>
-  <div>
-    Probe: <span>{{ probe }}</span>
-  </div>
-  <div>
-    Positioning: <span>{{ position }}</span>
-  </div>
-  <div>
-    Space Station: <span>{{ station }}</span>
-  </div>
-  <div>
-    Telescope: <span>{{ scope }}</span>
   </div>
 </div>

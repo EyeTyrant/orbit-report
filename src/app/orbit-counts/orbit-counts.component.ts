@@ -17,13 +17,22 @@ export class OrbitCountsComponent implements OnInit {
   position: number = 0;
   station: number = 0;
   scope: number = 0;
+  types: any[] = [];
 
   constructor() {}
 
   ngOnInit() {}
 
-  count(orbiter: any): number {
-    return this.satellites.filter(satellites => satellites.type === orbiter).length;
+  count(sat: any): number {
+    // for (let i = 0; i < this.types.length; i++) {
+    if (!this.types.includes(sat)) {
+      this.types.push(sat);
+    }
+    // }
+
+    console.log(sat);
+    console.log(this.types);
+    return this.satellites.filter(satellites => satellites.type === sat).length;
   }
 
   // totals(kind: string) {
