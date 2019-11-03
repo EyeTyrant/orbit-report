@@ -29,18 +29,18 @@ export class OrbitCountsComponent implements OnInit {
       this.types.push(sat);
     }
     // }
-
     console.log(sat);
     console.log(this.types);
     return this.satellites.filter(satellites => satellites.type === sat).length;
   }
 
-  // totals(kind: string) {
+  // totals(kindOfSat: string) {
   //   let list: string[] = [];
   //   for (let i = 0; i < this.displayList.length; i++) {
   //     let type = this.displayList[i].type.toLowerCase();
-  //     if (type.includes(kind)){
-
-  //     console.log(list)
+  //     if (type.includes(kindOfSat)) {
+  //       console.log(list);
+  //     }
+  //   }
   // }
 }
